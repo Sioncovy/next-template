@@ -1,0 +1,58 @@
+{
+  "name": "next-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "eslint": "eslint --fix --no-error-on-unmatched-pattern '**/*.{ts,tsx}'",
+    "prettier": "prettier -c .",
+    "fix:prettier": "prettier --write .",
+    "prepare": "husky install",
+    "lint-stage": "lint-staged",
+    "commit": "cz"
+  },
+  "dependencies": {
+    "next": "14.0.1",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.1",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.0.2",
+    "postcss": "^8",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "pnpm eslint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
